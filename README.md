@@ -10,8 +10,8 @@ After the linux kernel starts and initialize all its subsystems and hardware per
 
 *[Fig 1 The linux system architecture ( [Bootlin yocto project training](https://bootlin.com/training/yocto/) )]*
 
-The role for the embedded linux integrator is to build all these layers , e.g the integrator will start with the bootloader that the support the hardware 
-then configure it , cross-compile and build it same also for the linux kernel and then select the type of the init system (sysvinit, systemd ..) then selects the packages that he wants to include into the root filesystem and cross-compile and build them . 
+The role for the embedded linux integrator is to build all these layers , e.g the integrator will start with the bootloader that support the hardware 
+configure it , cross-compile and build it same also for the linux kernel and will select the type of the init system (sysvinit, systemd ..) then selects the ser of packages that he wants to include into the root filesystem and cross-compile and build them . 
 
 This process can be done manually but it has many disadvantages :
 

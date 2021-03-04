@@ -380,13 +380,48 @@ Replace interface with the interface name which you can get using ifconfig or ip
  1 - **cmdline.txt** : The kernel command line will be written here and passed to the kernel by the bootloader 
  2- **config.txt** : This file contains the settings for the rasberry pi board , here you can disable/enable and edit the settings for the peripherals (consider it like your PC BIOS but without GUI )
  
- To be able to see the kernel logs i'll connect usb_to_ftdi cable to the raspberry pi UART 1 as shown here : 
+ To be able to see the kernel logs i'll connect usb_to_ftdi cable to the raspberry pi UART 1 as shown here :  
+ 
+ ![](./doc/Images/Linux_layers.png)  
+ 
+*[The black will be connected to the GND , Yellow to the Cable RX while Orange will be connected to the TX pin ]*
+ 
+ That's not the whole thing , you need to edit the config.txt to enable the uart , add the following line to the config.txt  
+ ```
+ enable_uart=1 
+ ````
+ And the following line to the **cmdline.txt**  
+ ```
+ console=serial0,115200 console=tty1
+ ```
+ Now copy the cmdline.txt and config.txt to the BOOT partition  
+ ```
+ $ sudo cp bootfiles/config.txt /media/msharaf/BOOT/
+ $ sudo cp bootfiles/cmdline.txt /media/msharaf/BOOT/
+ ```
+ While this will make things work but this is not the yocto why to modify generated files , you shall look at the recipe that provides the config.txt & cmdline.txt then make an appeneded recipe that will change the content of the two files to match your need  
+ 
 12 - Copy the root filesystem image into the ROOT partition 
-
+ 
+ ```
+ $ sudo tar xf core-image-minimal-raspberrypi4-64.tar.bz2 -C /media/msharaf/ROOT
+ ```
+ 
 13 - Setup the board 
+  1 Connect the ethernet cable to your board and to your PC interface  
+  2 Connect the USB to FTDI cable to your PC 
+  3 Open a terminal on the connected USB port to see the log 
+  ```
+  sudo picocom -b 115200  /dev/ttyUSB0
+  ```
+  4 Switch the power on , you should the kernel logs at the terminal 
+  5 Open a new terminal and request an access to the ssh 
+  ```
+  $ ssh-keygen -f "/home/msharaf/.ssh/known_hosts" -R "192.168.0.100"
+  $ ssh root@192.168.0.100
 
 
-
+  
 # Resources  
 1- https://www.yoctoproject.org/docs/current/mega-manual/mega-manual.html  
 2- https://bootlin.com/training/yocto/  

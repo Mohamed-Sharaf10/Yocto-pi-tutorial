@@ -382,7 +382,7 @@ Replace interface with the interface name which you can get using ifconfig or ip
  
  To be able to see the kernel logs i'll connect usb_to_ftdi cable to the raspberry pi UART 1 as shown here :  
  
- ![](./doc/Images/Linux_layers.png)  
+ ![](./doc/Images/UART_connection.jpg)  
  
 *[The black will be connected to the GND , Yellow to the Cable RX while Orange will be connected to the TX pin ]*
  

@@ -1,4 +1,4 @@
-# yocto-pi4-tutorial : This tutorial discuss the basics of yocto and how to use it with raspberry pi 4
+# Yocto-pi4-tutorial : This tutorial discusses the basics of yocto and how to use it with raspberry pi 4
 
 ## Introduction 
 

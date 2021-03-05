@@ -83,7 +83,7 @@ meta-skeleton : Contains template recipes for BSP and kernel development.
 
 The yocto project consists of the Poky layer which itself contains other layer called OpenEmbedded Core layer :  
 1- OpenEmbedded Core :  
-   Which contains the common set of metadata (recipes recipes, classes, and associated files) to build on it
+   Which contains the common set of metadata (recipes recipes, classes, and associated files) to build on it  
 2- Poky :  
    It defines the defualt distribution to use ( e.g the C library , the kernel version ,list of features to be included into the image)  
    So it serves as a starting point for working with yocto, you can start with the poky distrubution and modify it to match your needs 
@@ -419,7 +419,7 @@ Replace interface with the interface name which you can get using ifconfig or ip
   ```
   $ ssh-keygen -f "/home/msharaf/.ssh/known_hosts" -R "192.168.0.100"
   $ ssh root@192.168.0.100
-
+  ```
 
   
 # Resources  

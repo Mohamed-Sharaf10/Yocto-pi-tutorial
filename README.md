@@ -76,7 +76,7 @@ In yocto recipes that are related to the same topic grouped under one folder and
 We can group all these folders under the same directory and we call it a **layer** .  
 So **layer** is a set of recipes that are used for a common purpose and by convention the name of the layer starts with the keyword "meta"   
 Examples of layers :   
-meta-raspberry layer : Contains a set of recipes specific for the raspberry pi boards (bsp layer)
+meta-raspberry layer : Contains a set of recipes specific for the raspberry pi boards (bsp layer)  
 meta layer : Contains common set of recipes that we can build on it  
 meta-qt5 layer : Contains set of recipes to add support of QT5 into your image   
 meta-skeleton : Contains template recipes for BSP and kernel development.  

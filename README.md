@@ -22,7 +22,7 @@ This process can be done manually but it has many disadvantages :
 
 \[Such a proccess can take days to be done (depends on the size of the project) and same also to repreduce it manually ]
 
-Although all these disadvantages its highly recommended to start building small system manaully before using build tool like yocto just to know the process in depth and to touch with some build toola like autoconf and cmake also this will help you later debug issues found when you are using yocto.
+Although all these disadvantages its highly recommended to start building small system manaully before using build tool like yocto just to know the process in depth and to touch with some build tool like autoconf and cmake also this will help you later debug issues found when you are using yocto.
 
 The second option to use is a build system that will automate the whole process and at the same time guarantee high degree of flexibility to fine tune all things , there are many build systems exist (e.g buildroot , yocto , PTXdist ..) here we are interested in yocto.  
 
